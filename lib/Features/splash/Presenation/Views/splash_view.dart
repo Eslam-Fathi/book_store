@@ -1,3 +1,4 @@
+import 'package:book_store/Features/splash/Presenation/Views/Widgets/splash_view_body.dart';
 import 'package:flutter/material.dart';
 
 class SplashView extends StatelessWidget {
@@ -5,6 +6,8 @@ class SplashView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: Center(child: Text("Splash View")));
+    return const Scaffold(
+      body: SplasgViewBody(),
+    );
   }
 }
