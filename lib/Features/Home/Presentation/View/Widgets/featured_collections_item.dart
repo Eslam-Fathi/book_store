@@ -1,15 +1,19 @@
-import 'package:book_store/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class FeaturedBooksItem extends StatelessWidget {
-  const FeaturedBooksItem({super.key});
+import 'package:book_store/core/utils/assets.dart';
+
+class FeaturedCollectionsItem extends StatelessWidget {
+  const FeaturedCollectionsItem(
+      {super.key, required this.width, required this.height});
+
+  final double width, height;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150.h,
-      width: 309,
+      height: height.h,
+      width: width.w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(
           Radius.circular(20.r),
