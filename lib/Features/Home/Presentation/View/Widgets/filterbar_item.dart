@@ -1,4 +1,5 @@
 import 'package:book_store/constants.dart';
+import 'package:book_store/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -19,7 +20,7 @@ class FilterBarItem extends StatelessWidget {
       child: Center(
         child: Text("Authors",
             style: TextStyle(
-              fontFamily: kPrimaryFontStyle,
+              fontFamily: Styles.titleMedium.fontFamily,
               fontSize: 14.sp,
               color: kSecondaryColor,
             )),
