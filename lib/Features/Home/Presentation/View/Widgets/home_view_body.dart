@@ -1,6 +1,6 @@
 import 'package:book_store/Features/Home/Presentation/View/Widgets/custom_appbar.dart';
 import 'package:book_store/Features/Home/Presentation/View/Widgets/custom_filterbar.dart';
-import 'package:book_store/Features/Home/Presentation/View/Widgets/featured_book_item.dart';
+import 'package:book_store/Features/Home/Presentation/View/Widgets/featured_books_listview.dart';
 import 'package:book_store/Features/Home/Presentation/View/Widgets/featured_collections_listview.dart';
 import 'package:book_store/Features/Home/Presentation/View/Widgets/medium_title.dart';
 import 'package:book_store/Features/Home/Presentation/View/Widgets/my_libirary_list.dart';
@@ -39,17 +39,22 @@ class HomeViewBody extends StatelessWidget {
           ),
           const MyLibiraryWidgetList(),
           const MediumTitle(title: 'AudioBooks'),
-          const FeaturedBookItem(
+          const FeaturedBooksListView(
             width: 135,
             height: 230,
           ),
           const MediumTitle(title: 'Recently Added'),
-          SizedBox(
-            height: 100.h,
+          const FeaturedBooksListView(
+            width: 135,
+            height: 230,
           ),
           const MediumTitle(title: 'Recommended'),
+          const FeaturedBooksListView(
+            width: 135,
+            height: 230,
+          ),
           SizedBox(
-            height: 100.h,
+            height: 20.h,
           )
         ],
       ),
