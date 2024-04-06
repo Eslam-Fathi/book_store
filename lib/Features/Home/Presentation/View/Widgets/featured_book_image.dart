@@ -1,4 +1,4 @@
-import 'package:book_store/constants.dart';
+import 'package:book_store/core/utils/constants.dart';
 import 'package:book_store/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

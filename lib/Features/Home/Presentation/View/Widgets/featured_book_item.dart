@@ -1,6 +1,6 @@
 import 'package:book_store/Features/Home/Presentation/View/Widgets/featured_book_button.dart';
 import 'package:book_store/Features/Home/Presentation/View/Widgets/featured_book_image.dart';
-import 'package:book_store/constants.dart';
+import 'package:book_store/core/utils/constants.dart';
 import 'package:book_store/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

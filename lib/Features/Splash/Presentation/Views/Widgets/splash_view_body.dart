@@ -1,6 +1,6 @@
 import 'package:book_store/Features/Home/Presentation/View/home_screen.dart';
 import 'package:book_store/Features/Splash/Presentation/Views/Widgets/animated_brand_logo.dart';
-import 'package:book_store/constants.dart';
+import 'package:book_store/core/utils/constants.dart';
 import 'package:book_store/core/utils/assets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
