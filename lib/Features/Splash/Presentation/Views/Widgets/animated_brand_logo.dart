@@ -21,7 +21,7 @@ class AnimatedBrandLogo extends StatelessWidget {
           position: slideAnimation,
           child: FadeTransition(
             opacity: fadeInAnimation,
-            child: SvgPicture.asset(AssetsData.brandLogo),
+            child: SvgPicture.asset(AssetsData.icBrandLogo),
           ),
         );
       },

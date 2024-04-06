@@ -26,7 +26,7 @@ class _SplasgViewBodyState extends State<SplashViewBody>
 
     initSlidingANDFadeInAnimation();
 
-    navigateToHome();
+    navigateToHomePop();
   }
 
   @override
@@ -54,11 +54,17 @@ class _SplasgViewBodyState extends State<SplashViewBody>
     );
   }
 
-  void navigateToHome() {
-    Future.delayed(const Duration(seconds: 3), () {
-      Get.to(() => const HomeView(),
-          transition: Transition.fadeIn, duration: kTransitionDuration);
-    });
+  void navigateToHomePop() {
+    Future.delayed(
+      const Duration(seconds: 3),
+      () {
+        Get.offAll(
+          () => const HomeView(),
+          transition: Transition.circularReveal,
+          duration: kTransitionDuration,
+        );
+      },
+    );
   }
 
   void initSlidingANDFadeInAnimation() {

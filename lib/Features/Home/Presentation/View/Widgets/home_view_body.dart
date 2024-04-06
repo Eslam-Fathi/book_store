@@ -4,7 +4,6 @@ import 'package:book_store/Features/Home/Presentation/View/Widgets/featured_book
 import 'package:book_store/Features/Home/Presentation/View/Widgets/featured_collections_listview.dart';
 import 'package:book_store/Features/Home/Presentation/View/Widgets/medium_title.dart';
 import 'package:book_store/Features/Home/Presentation/View/Widgets/my_libirary_list.dart';
-import 'package:book_store/core/utils/constants.dart';
 import 'package:book_store/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
