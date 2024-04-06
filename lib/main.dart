@@ -1,5 +1,6 @@
 import 'package:book_store/Features/Splash/Presentation/Views/splash_view.dart';
-import 'package:book_store/constants.dart';
+import 'package:book_store/core/utils/constants.dart';
+import 'package:book_store/core/Theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -16,13 +17,12 @@ class BookStoreApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      builder: (context, child) => GetMaterialApp(
-        theme: ThemeData.dark().copyWith(
-          scaffoldBackgroundColor: kPrimaryColor,
-          textTheme: GoogleFonts.rosarivoTextTheme(ThemeData.dark().textTheme),
-        ),
-        home: const SplashView(),
-      ),
+      builder: (context, child) {
+        return GetMaterialApp(
+          theme: themeData,
+          home: const SplashView(),
+        );
+      },
       designSize: const Size(360, 800),
     );
   }
