@@ -42,7 +42,7 @@ class FeaturedBookItem extends StatelessWidget {
               "Pachinko Novela",
               maxLines: 2,
               softWrap: true,
-              style: Styles.titleSmall,
+              style: Styles.textRegular14,
             ),
             SizedBox(
               height: 10.h,

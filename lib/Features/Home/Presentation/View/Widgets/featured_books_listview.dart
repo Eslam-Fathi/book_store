@@ -1,9 +1,9 @@
-import 'package:book_store/Features/Home/Presentation/View/Widgets/featured_collections_item.dart';
+import 'package:book_store/Features/Home/Presentation/View/Widgets/featured_book_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class FeaturedCollectionsListView extends StatelessWidget {
-  const FeaturedCollectionsListView(
+class FeaturedBooksListView extends StatelessWidget {
+  const FeaturedBooksListView(
       {super.key, required this.height, required this.width});
 
   final double height, width;
@@ -17,12 +17,11 @@ class FeaturedCollectionsListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return Padding(
-            padding: EdgeInsets.symmetric(horizontal: 5.w),
-            child: FeaturedCollectionsItem(
-              width: width,
-              height: height,
-            ),
-          );
+              padding: EdgeInsets.symmetric(horizontal: 8.w),
+              child: const FeaturedBookItem(
+                height: 230,
+                width: 135,
+              ));
         },
       ),
     );

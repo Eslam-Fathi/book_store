@@ -12,7 +12,7 @@ class MediumTitle extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 24.h),
       child: Text(
         title,
-        style: Styles.titleMedium,
+        style: Styles.textRegular20,
       ),
     );
   }
