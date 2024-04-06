@@ -17,31 +17,14 @@ class FeaturedBookButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(10.r),
         ),
       ),
-      child: Row(
-        children: [
-          SizedBox(
-            width: 20.w,
+      child: Center(
+        child: Text(
+          "Check it out!",
+          style: Styles.textSimiBold16.copyWith(
+            // color: Colors.white,
+            color: kSecondaryColor,
           ),
-          Text(
-            "2017",
-            style: Styles.titleSmall,
-          ),
-          const Spacer(),
-          Container(
-            height: 39.h,
-            width: 39.w,
-            decoration: ShapeDecoration(
-              color: kSecondaryColor,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.r),
-              ),
-            ),
-            child: Icon(
-              Icons.volume_up_rounded,
-              size: 24.sp,
-            ),
-          )
-        ],
+        ),
       ),
     );
   }

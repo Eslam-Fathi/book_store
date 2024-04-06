@@ -30,11 +30,7 @@ class HomeViewBody extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: 20.h),
             child: Text(
               "My Libirary",
-              style: TextStyle(
-                fontSize: 16.sp,
-                fontFamily: Styles.titleMedium.fontFamily,
-                color: kSecondaryColor,
-              ),
+              style: Styles.textRegular16,
             ),
           ),
           const MyLibiraryWidgetList(),

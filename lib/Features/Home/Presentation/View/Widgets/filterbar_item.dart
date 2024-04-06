@@ -18,12 +18,12 @@ class FilterBarItem extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: Text("Authors",
-            style: TextStyle(
-              fontFamily: Styles.titleMedium.fontFamily,
-              fontSize: 14.sp,
-              color: kSecondaryColor,
-            )),
+        child: Text(
+          "Authors",
+          style: Styles.textRegular14.copyWith(
+            color: kSecondaryColor,
+          ),
+        ),
       ),
     );
   }

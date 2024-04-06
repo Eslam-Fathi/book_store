@@ -17,7 +17,7 @@ class FeaturedCollectionsListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8.w),
+            padding: EdgeInsets.symmetric(horizontal: 5.w),
             child: FeaturedCollectionsItem(
               width: width,
               height: height,

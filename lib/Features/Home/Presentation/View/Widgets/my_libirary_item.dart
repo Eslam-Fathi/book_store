@@ -36,10 +36,7 @@ class MyLibiraryItem extends StatelessWidget {
                   maxLines: 2,
                   // overflow: TextOverflow.ellipsis,
                   softWrap: true,
-                  style: TextStyle(
-                      fontSize: 16.sp,
-                      color: kSecondaryColor,
-                      fontFamily: Styles.titleMedium.fontFamily),
+                  style: Styles.textRegular16,
                 ),
                 Icon(
                   icon,
