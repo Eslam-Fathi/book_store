@@ -6,8 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ComponentBigButton extends StatelessWidget {
-  const ComponentBigButton({
+class ComponentBookButton extends StatelessWidget {
+  const ComponentBookButton({
     super.key,
     required this.fillColor,
     required this.textColor,

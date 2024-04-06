@@ -43,11 +43,11 @@ class BookViewBody extends StatelessWidget {
           const SmallBookDescription(),
           // Component Button
 
-          const ComponentBigButton(
+          const ComponentBookButton(
             fillColor: kSecondaryColor,
             textColor: Color(0xff4A2B29),
           ),
-          const ComponentBigButton(
+          const ComponentBookButton(
             fillColor: Colors.transparent,
             textColor: kSecondaryColor,
           ),
