@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'Widgets/book_view_body.dart';
+
+import 'package:book_store/Features/Book/Presentation/View/Widgets/book_view_body.dart';
 
 class BookView extends StatelessWidget {
   const BookView({super.key});

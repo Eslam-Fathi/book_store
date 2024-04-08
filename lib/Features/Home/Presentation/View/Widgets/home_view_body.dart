@@ -1,3 +1,6 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:book_store/Features/Home/Presentation/View/Widgets/custom_appbar.dart';
 import 'package:book_store/Features/Home/Presentation/View/Widgets/custom_filterbar.dart';
 import 'package:book_store/Features/Home/Presentation/View/Widgets/featured_books_listview.dart';
@@ -5,8 +8,6 @@ import 'package:book_store/Features/Home/Presentation/View/Widgets/featured_coll
 import 'package:book_store/Features/Home/Presentation/View/Widgets/medium_title.dart';
 import 'package:book_store/Features/Home/Presentation/View/Widgets/my_libirary_list.dart';
 import 'package:book_store/core/utils/styles.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});

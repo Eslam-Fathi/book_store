@@ -1,6 +1,7 @@
-import 'package:book_store/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
+import 'package:book_store/core/utils/assets.dart';
 
 class AnimatedBrandLogo extends StatelessWidget {
   const AnimatedBrandLogo({

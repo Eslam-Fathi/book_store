@@ -1,7 +1,8 @@
-import 'package:book_store/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+
+import 'package:book_store/core/utils/assets.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});

@@ -1,9 +1,10 @@
-import 'package:book_store/Features/Book/Presentation/View/book_view.dart';
-import 'package:book_store/core/utils/constants.dart';
-import 'package:book_store/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+
+import 'package:book_store/Features/Book/Presentation/View/book_view.dart';
+import 'package:book_store/core/utils/constants.dart';
+import 'package:book_store/core/utils/styles.dart';
 
 class FeaturedBookButton extends StatelessWidget {
   const FeaturedBookButton({super.key});
