@@ -8,11 +8,13 @@ class BookView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Stack(
         children: [
-          BookViewBody(),
-          CustomAppBar(),
+          const BookViewBody(),
+          CustomAppBar(
+            press: () {},
+          ),
         ],
       ),
     );
