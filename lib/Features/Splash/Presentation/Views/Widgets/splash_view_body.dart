@@ -1,11 +1,12 @@
-import 'package:book_store/Features/Home/Presentation/View/home_screen.dart';
-import 'package:book_store/Features/Splash/Presentation/Views/Widgets/animated_brand_logo.dart';
-import 'package:book_store/core/utils/constants.dart';
-import 'package:book_store/core/utils/assets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+
+import 'package:book_store/Features/Home/Presentation/View/home_screen.dart';
+import 'package:book_store/Features/Splash/Presentation/Views/Widgets/animated_brand_logo.dart';
+import 'package:book_store/core/utils/assets.dart';
+import 'package:book_store/core/utils/constants.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -26,7 +27,7 @@ class _SplasgViewBodyState extends State<SplashViewBody>
 
     initSlidingANDFadeInAnimation();
 
-    navigateToHome();
+    navigateToHomePop();
   }
 
   @override
@@ -54,11 +55,17 @@ class _SplasgViewBodyState extends State<SplashViewBody>
     );
   }
 
-  void navigateToHome() {
-    Future.delayed(const Duration(seconds: 3), () {
-      Get.to(() => const HomeView(),
-          transition: Transition.fadeIn, duration: kTransitionDuration);
-    });
+  void navigateToHomePop() {
+    Future.delayed(
+      const Duration(seconds: 3),
+      () {
+        Get.offAll(
+          () => const HomeView(),
+          transition: Transition.circularReveal,
+          duration: kTransitionDuration,
+        );
+      },
+    );
   }
 
   void initSlidingANDFadeInAnimation() {

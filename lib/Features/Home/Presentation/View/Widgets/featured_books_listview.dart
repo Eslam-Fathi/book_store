@@ -1,6 +1,7 @@
-import 'package:book_store/Features/Home/Presentation/View/Widgets/featured_book_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'package:book_store/Features/Home/Presentation/View/Widgets/featured_book_item.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
   const FeaturedBooksListView(

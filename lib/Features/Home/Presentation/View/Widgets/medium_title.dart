@@ -1,6 +1,7 @@
-import 'package:book_store/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'package:book_store/core/utils/styles.dart';
 
 class MediumTitle extends StatelessWidget {
   const MediumTitle({super.key, required this.title});

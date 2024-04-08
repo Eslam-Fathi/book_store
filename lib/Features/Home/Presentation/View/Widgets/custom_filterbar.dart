@@ -1,5 +1,6 @@
-import 'package:book_store/Features/Home/Presentation/View/Widgets/filterbar_item.dart';
 import 'package:flutter/material.dart';
+
+import 'package:book_store/Features/Home/Presentation/View/Widgets/filterbar_item.dart';
 
 class CustomFilterBar extends StatelessWidget {
   const CustomFilterBar({super.key});
