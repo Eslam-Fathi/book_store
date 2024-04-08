@@ -16,6 +16,9 @@ class AssetsData {
   // static const String icBook = 'assets/svg/book_icon.svg';
   static const String icBookmark = 'assets/svg/icon_page.svg';
   static const String icReadBook = 'assets/svg/ic_read_book.svg';
+  static const String icUser = 'assets/svg/icUser.svg';
+  static const String icContact = 'assets/svg/icContact.svg';
+  static const String icSettings = 'assets/svg/icSettings.svg';
 
   static const String icUpload = 'assets/svg/bi_upload.svg';
   static const String icStarOutlined = 'assets/svg/solar_star_outline.svg';

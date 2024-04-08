@@ -4,7 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 import 'package:book_store/Features/Home/Presentation/View/home_screen.dart';
-import 'package:book_store/Features/Splash/Presentation/Views/Widgets/animated_brand_logo.dart';
+import 'package:book_store/Features/Splash/Presentation/View/Widgets/animated_brand_logo.dart';
 import 'package:book_store/core/utils/assets.dart';
 import 'package:book_store/core/utils/constants.dart';
 

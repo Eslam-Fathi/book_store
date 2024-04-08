@@ -1,8 +1,9 @@
+import 'package:book_store/Features/Side_Menu/Presentation/View/side_menu_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import 'package:book_store/Features/Splash/Presentation/Views/splash_view.dart';
+import 'package:book_store/Features/Splash/Presentation/View/splash_view.dart';
 import 'package:book_store/core/Theme/theme.dart';
 
 void main() {
