@@ -1,10 +1,10 @@
-import 'package:book_store/core/utils/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'package:book_store/core/utils/assets.dart';
+import 'package:book_store/core/utils/constants.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -30,10 +30,6 @@ class CustomAppBar extends StatelessWidget {
                 SvgPicture.asset(AssetsData.icBrandLogo),
                 const Spacer(),
                 SvgPicture.asset(AssetsData.icSearch),
-                // const FaIcon(
-                //   FontAwesomeIcons.magnifyingGlass,
-                //   size: 25,
-                // ),
               ],
             ),
           ),
