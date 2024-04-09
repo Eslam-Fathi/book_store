@@ -20,16 +20,21 @@ class CustomAppBar extends StatelessWidget {
           width: double.infinity,
           decoration: const BoxDecoration(color: kPrimaryColor),
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 24.w),
+            padding: EdgeInsets.symmetric(horizontal: 14.w),
             child: Row(
               children: [
-                MenuButton(
-                  press: () {},
+                IconButton(
+                  onPressed: () {},
+                  icon: SvgPicture.asset(AssetsData.icMenu),
                 ),
+
                 const Spacer(),
                 SvgPicture.asset(AssetsData.icBrandLogo),
                 const Spacer(),
-                SvgPicture.asset(AssetsData.icSearch),
+                IconButton(
+                  onPressed: () {},
+                  icon: SvgPicture.asset(AssetsData.icSearch),
+                ),
                 // const FaIcon(
                 //   FontAwesomeIcons.magnifyingGlass,
                 //   size: 25,
