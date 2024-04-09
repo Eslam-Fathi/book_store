@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 
-import 'package:book_store/Features/Splash/Presentation/View/splash_view.dart';
 import 'package:book_store/core/Theme/theme.dart';
+import 'package:book_store/core/utils/app_router.dart';
 
 void main() {
   runApp(const BookStoreApp());
@@ -17,9 +16,9 @@ class BookStoreApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       builder: (context, child) {
-        return GetMaterialApp(
+        return MaterialApp.router(
+          routerConfig: AppRouter.router,
           theme: themeData,
-          home: const SplashView(),
         );
       },
       designSize: const Size(360, 800),

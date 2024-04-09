@@ -1,12 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 
-import 'package:book_store/Features/Home/Presentation/View/home_screen.dart';
 import 'package:book_store/Features/Splash/Presentation/View/Widgets/animated_brand_logo.dart';
+import 'package:book_store/core/utils/app_router.dart';
 import 'package:book_store/core/utils/assets.dart';
-import 'package:book_store/core/utils/constants.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -59,11 +58,12 @@ class _SplasgViewBodyState extends State<SplashViewBody>
     Future.delayed(
       const Duration(seconds: 3),
       () {
-        Get.offAll(
-          () => const HomeView(),
-          transition: Transition.circularReveal,
-          duration: kTransitionDuration,
-        );
+        // Get.offAll(
+        //   () => const HomeView(),
+        //   transition: Transition.circularReveal,
+        //   duration: kTransitionDuration,
+        // );
+        GoRouter.of(context).push(AppRouter.kHomeView);
       },
     );
   }
