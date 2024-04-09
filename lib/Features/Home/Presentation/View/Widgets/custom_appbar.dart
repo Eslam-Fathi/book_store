@@ -1,13 +1,14 @@
-import 'package:book_store/core/utils/constants.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'package:book_store/core/utils/assets.dart';
+import 'package:book_store/core/utils/constants.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key});
+  const CustomAppBar({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

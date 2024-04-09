@@ -21,7 +21,7 @@ class HomeViewBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: 60.h,
+                height: 20.h,
               ),
               const CustomFilterBar(),
               SizedBox(height: 30.h),
