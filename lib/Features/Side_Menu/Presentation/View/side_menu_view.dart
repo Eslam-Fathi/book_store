@@ -5,21 +5,16 @@ import 'package:book_store/Features/Side_Menu/Presentation/View/Widgets/menu_ite
 import 'package:book_store/Features/Side_Menu/Presentation/View_models/list_tile_data.dart';
 import 'package:book_store/core/utils/constants.dart';
 
-class SideMenuView extends StatefulWidget {
+class SideMenuView extends StatelessWidget {
   const SideMenuView({
     super.key,
   });
 
   @override
-  State<SideMenuView> createState() => _SideMenuViewState();
-}
-
-class _SideMenuViewState extends State<SideMenuView> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        width: 288.w,
+        width: 250.w,
         height: double.infinity,
         color: kOverlayColor,
         child: SafeArea(
@@ -34,6 +29,7 @@ class _SideMenuViewState extends State<SideMenuView> {
                         MenuItem(
                           menuItems: listTileData,
                           tileIndex: listTileData.indexOf(listItem),
+                          onTap: () {},
                         ),
                         const Divider(),
                       ],

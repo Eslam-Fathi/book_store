@@ -9,10 +9,12 @@ class MenuItem extends StatelessWidget {
     super.key,
     required this.menuItems,
     required this.tileIndex,
+    required this.onTap,
   });
 
   final List<Map> menuItems;
   final int tileIndex;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +28,7 @@ class MenuItem extends StatelessWidget {
         menuItems[tileIndex]['title'],
         style: Styles.textRegular14.copyWith(color: kSecondaryColor),
       ),
-      onTap: menuItems[tileIndex]['route'],
+      onTap: onTap,
     );
   }
 }
