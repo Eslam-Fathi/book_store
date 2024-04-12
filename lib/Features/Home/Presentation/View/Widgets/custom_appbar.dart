@@ -1,9 +1,11 @@
+import 'package:book_store/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'package:book_store/core/utils/assets.dart';
 import 'package:book_store/core/utils/constants.dart';
+import 'package:go_router/go_router.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
@@ -28,18 +30,15 @@ class CustomAppBar extends StatelessWidget {
                   onPressed: () {},
                   icon: SvgPicture.asset(AssetsData.icMenu),
                 ),
-
                 const Spacer(),
                 SvgPicture.asset(AssetsData.icBrandLogo),
                 const Spacer(),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    GoRouter.of(context).push(AppRouter.kSearchView);
+                  },
                   icon: SvgPicture.asset(AssetsData.icSearch),
                 ),
-                // const FaIcon(
-                //   FontAwesomeIcons.magnifyingGlass,
-                //   size: 25,
-                // ),
               ],
             ),
           ),
