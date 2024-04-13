@@ -1,20 +1,52 @@
-abstract class Failure {}
+import 'package:dio/dio.dart';
 
-class ServerFailure extends Failure {
-  // final String message;
+abstract class Failure {
+  final String errMessage;
 
-  // ServerFailure({this.message = 'Server Failure'});
+  Failure(this.errMessage);
 }
 
-// class CacheFailure extends Failure {
-//   final String message;
+class ServerFailure extends Failure {
+  ServerFailure(super.errMessage);
 
-//   CacheFailure({this.message = 'Cache Failure'});
-// }
+  factory ServerFailure.fromDioExcepion(DioException dioException) {
+    switch (dioException.type) {
+      case DioExceptionType.connectionTimeout:
+        return ServerFailure("Connection Timeout with Api Server.");
+      case DioExceptionType.sendTimeout:
+        return ServerFailure("Send Timeout with Api Server.");
+      case DioExceptionType.receiveTimeout:
+        return ServerFailure("Receive Timeout with Api Server.");
+      case DioExceptionType.badCertificate:
+        return ServerFailure("Bad certificate with Api Server.");
+      case DioExceptionType.badResponse:
+        return ServerFailure.fromResponse(
+            dioException.response!.statusCode!, dioException.response!.data);
+      case DioExceptionType.cancel:
+        return ServerFailure("Requet to Api Server was cancelled.");
+      case DioExceptionType.connectionError:
+        if (dioException.message!.contains('SocketException')) {
+          return ServerFailure("No internet connection.");
+        }
+        return ServerFailure("Something went wrong. Please, try again later.");
+      case DioExceptionType.unknown:
+        return ServerFailure("Unexcpected error! Please, try again later.");
 
-// class NetworkFailure extends Failure {
-//   final String message;
+      default:
+        return ServerFailure(
+            "Opps, Something went wrong. Please, try again later.");
+    }
+  }
 
-//   NetworkFailure({this.message = 'Network Failure'});
-// }
-
+  factory ServerFailure.fromResponse(int statusCode, dynamic response) {
+    if (statusCode == 400 || statusCode == 401 || statusCode == 403) {
+      return ServerFailure(response['error']['message']);
+    } else if (statusCode == 404) {
+      return ServerFailure("Requst not Found. Please, try again.");
+    } else if (statusCode == 500) {
+      return ServerFailure("Internal Server Error. Please, try again later.");
+    } else {
+      return ServerFailure("Something went wrong. Please, try again later.");
+    }
+  }
+}
