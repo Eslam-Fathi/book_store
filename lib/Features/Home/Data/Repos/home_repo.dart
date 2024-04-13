@@ -1,6 +1,7 @@
+import 'package:book_store/Features/Home/Data/Models/book_model/book_model.dart';
+import 'package:book_store/core/Errors/failure.dart';
+import 'package:dartz/dartz.dart';
+
 abstract class HomeRepo {
-  fetchFeaturedBooks();
-  fetchFeaturedAuthors();
-  fetchFeaturedCategories();
-  fetchFeaturedPublishers();
+  Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks();
 }
