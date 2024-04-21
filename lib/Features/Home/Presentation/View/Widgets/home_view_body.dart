@@ -40,6 +40,7 @@ class HomeViewBody extends StatelessWidget {
               const MyLibiraryWidgetList(),
               const MediumTitle(title: 'AudioBooks'),
               const RecomendedBooksListView(
+                sectionTitle: 'AudioBooks',
                 width: 135,
                 height: 230,
               ),
@@ -50,6 +51,7 @@ class HomeViewBody extends StatelessWidget {
               ),
               const MediumTitle(title: 'Recommended'),
               const RecomendedBooksListView(
+                sectionTitle: 'Recommended',
                 width: 135,
                 height: 230,
               ),

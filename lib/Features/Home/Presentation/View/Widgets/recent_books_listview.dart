@@ -30,15 +30,9 @@ class RecentBooksListView extends StatelessWidget {
                 return Padding(
                   padding: EdgeInsets.symmetric(horizontal: 8.w),
                   child: FeaturedBookItem(
-                    bookRate: "4.3",
-                    imageUrl: (state.books[index].volumeInfo?.imageLinks
-                                ?.thumbnail ??
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/832px-No-Image-Placeholder.svg.png")
-                        .toString(),
+                    book: state.books[index],
                     height: 230,
                     width: 135,
-                    bookTitle:
-                        (state.books[index].volumeInfo?.title).toString(),
                   ),
                 );
               },

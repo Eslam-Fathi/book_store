@@ -1,3 +1,4 @@
+import 'package:book_store/Features/Home/Data/Models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -11,15 +12,12 @@ class FeaturedBookItem extends StatelessWidget {
     super.key,
     required this.width,
     required this.height,
-    required this.imageUrl,
-    required this.bookTitle,
-    required this.bookRate,
+    required this.book,
   });
 
   final double width, height;
-  final String imageUrl;
-  final String bookTitle;
-  final String bookRate;
+
+  final BookModel book;
 
   @override
   Widget build(BuildContext context) {
@@ -44,15 +42,17 @@ class FeaturedBookItem extends StatelessWidget {
                 color: kContainerColor.withOpacity(.5),
               ),
               child: FeaturedBookImage(
-                imageUrl: imageUrl,
-                bookRate: bookRate,
+                imageUrl: (book.volumeInfo?.imageLinks?.thumbnail ??
+                        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/832px-No-Image-Placeholder.svg.png")
+                    .toString(),
+                bookRate: '0.0',
               ),
             ),
             SizedBox(
               height: 10.h,
             ),
             Text(
-              bookTitle,
+              (book.volumeInfo?.title).toString(),
               maxLines: 2,
               softWrap: false,
               overflow: TextOverflow.fade,
