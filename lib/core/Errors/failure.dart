@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dio/dio.dart';
 
 abstract class Failure {
@@ -26,6 +28,8 @@ class ServerFailure extends Failure {
         return ServerFailure("Requet to Api Server was cancelled.");
       case DioExceptionType.connectionError:
         if (dioException.message!.contains('SocketException')) {
+          return ServerFailure("No internet connection.");
+        } else if (dioException.error is SocketException) {
           return ServerFailure("No internet connection.");
         }
         return ServerFailure("Something went wrong. Please, try again later.");
