@@ -22,4 +22,6 @@ class AssetsData {
 
   static const String icUpload = 'assets/svg/bi_upload.svg';
   static const String icStarOutlined = 'assets/svg/solar_star_outline.svg';
+
+  // Network images
 }

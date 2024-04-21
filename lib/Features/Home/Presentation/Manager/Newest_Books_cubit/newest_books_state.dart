@@ -17,15 +17,6 @@ final class NewestBooksSuccess extends NewestBooksState {
   const NewestBooksSuccess(this.books);
 }
 
-final class NewestBooksError extends NewestBooksState {
-  final String errorMessage;
-
-  const NewestBooksError(this.errorMessage);
-
-  @override
-  List<Object> get props => [errorMessage];
-}
-
 final class NewestBooksFailure extends NewestBooksState {
   final String errorMessage;
 

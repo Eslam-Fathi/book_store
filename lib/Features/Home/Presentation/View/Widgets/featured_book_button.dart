@@ -27,7 +27,7 @@ class FeaturedBookButton extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            "Check it out!",
+            "Check Book!",
             style: Styles.textSimiBold16.copyWith(
               color: kSecondaryColor,
             ),

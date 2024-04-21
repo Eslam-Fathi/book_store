@@ -24,12 +24,14 @@ class BookStoreApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) =>
-              FeaturedBooksCubit(getServiceLocator.get<HomeRepoImpl>()),
+              FeaturedBooksCubit(getServiceLocator.get<HomeRepoImpl>())
+                ..getFeaturedBooks(),
         ),
         BlocProvider(
           create: (context) =>
-              NewestBooksCubit(getServiceLocator.get<HomeRepoImpl>()),
-        )
+              NewestBooksCubit(getServiceLocator.get<HomeRepoImpl>())
+                ..getNewestBooks(),
+        ),
       ],
       child: ScreenUtilInit(
         builder: (context, child) {

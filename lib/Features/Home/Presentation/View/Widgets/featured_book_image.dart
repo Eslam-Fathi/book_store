@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -6,17 +7,27 @@ import 'package:book_store/core/utils/assets.dart';
 import 'package:book_store/core/utils/constants.dart';
 
 class FeaturedBookImage extends StatelessWidget {
-  const FeaturedBookImage({super.key});
+  const FeaturedBookImage({
+    super.key,
+    required this.imageUrl,
+    required this.bookRate,
+  });
+
+  final String imageUrl;
+  final String bookRate;
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Image.asset(
-          AssetsData.bookTestImage,
-          width: 111.w,
-          height: 111.h,
-          fit: BoxFit.cover,
+        ClipRRect(
+          borderRadius: BorderRadius.circular(10.r),
+          child: CachedNetworkImage(
+            height: 111.h,
+            width: 111.w,
+            fit: BoxFit.cover,
+            imageUrl: imageUrl,
+          ),
         ),
         Container(
           width: 40.w,
@@ -26,21 +37,18 @@ class FeaturedBookImage extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(20.r),
-                topLeft: Radius.circular(8.r),
+                topLeft: Radius.circular(10.r),
               ),
             ),
           ),
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 6.w),
+            padding: const EdgeInsets.symmetric(horizontal: 6),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 SvgPicture.asset(AssetsData.rateStar),
-                SizedBox(
-                  width: 2.w,
-                ),
                 Text(
-                  '4.5',
+                  bookRate,
                   style: TextStyle(
                     fontSize: 12.sp,
                     color: Colors.white,

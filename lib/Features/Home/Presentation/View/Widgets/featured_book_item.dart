@@ -7,10 +7,19 @@ import 'package:book_store/core/utils/constants.dart';
 import 'package:book_store/core/utils/styles.dart';
 
 class FeaturedBookItem extends StatelessWidget {
-  const FeaturedBookItem(
-      {super.key, required this.width, required this.height});
+  const FeaturedBookItem({
+    super.key,
+    required this.width,
+    required this.height,
+    required this.imageUrl,
+    required this.bookTitle,
+    required this.bookRate,
+  });
 
   final double width, height;
+  final String imageUrl;
+  final String bookTitle;
+  final String bookRate;
 
   @override
   Widget build(BuildContext context) {
@@ -34,15 +43,19 @@ class FeaturedBookItem extends StatelessWidget {
                 ),
                 color: kContainerColor.withOpacity(.5),
               ),
-              child: const FeaturedBookImage(),
+              child: FeaturedBookImage(
+                imageUrl: imageUrl,
+                bookRate: bookRate,
+              ),
             ),
             SizedBox(
               height: 10.h,
             ),
             Text(
-              "Pachinko Novela",
+              bookTitle,
               maxLines: 2,
-              softWrap: true,
+              softWrap: false,
+              overflow: TextOverflow.fade,
               style: Styles.textRegular14,
             ),
             SizedBox(
