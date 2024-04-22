@@ -72,6 +72,7 @@ class BookViewBody extends StatelessWidget {
                 fillColor: Colors.transparent,
                 textColor: kSecondaryColor,
               ),
+              const SizedBox(height: 20),
             ],
           ),
         ),

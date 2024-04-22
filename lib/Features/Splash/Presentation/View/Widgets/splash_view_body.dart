@@ -63,7 +63,9 @@ class _SplasgViewBodyState extends State<SplashViewBody>
         //   transition: Transition.circularReveal,
         //   duration: kTransitionDuration,
         // );
-        GoRouter.of(context).push(AppRouter.kHomeView);
+        GoRouter.of(context).go(
+          AppRouter.kHomeView,
+        );
       },
     );
   }
