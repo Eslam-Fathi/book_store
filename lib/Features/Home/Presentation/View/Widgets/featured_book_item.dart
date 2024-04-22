@@ -1,4 +1,5 @@
 import 'package:book_store/Features/Home/Data/Models/book_model/book_model.dart';
+import 'package:book_store/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -43,7 +44,7 @@ class FeaturedBookItem extends StatelessWidget {
               ),
               child: FeaturedBookImage(
                 imageUrl: (book.volumeInfo?.imageLinks?.thumbnail ??
-                        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/832px-No-Image-Placeholder.svg.png")
+                        AssetsData.noImageFound)
                     .toString(),
                 bookRate: '0.0',
               ),
@@ -61,7 +62,9 @@ class FeaturedBookItem extends StatelessWidget {
             SizedBox(
               height: 10.h,
             ),
-            const FeaturedBookButton(),
+            FeaturedBookButton(
+              book: book,
+            ),
           ],
         ),
       ),

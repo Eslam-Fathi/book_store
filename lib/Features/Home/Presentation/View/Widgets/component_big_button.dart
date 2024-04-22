@@ -12,17 +12,19 @@ class ComponentBookButton extends StatelessWidget {
     super.key,
     required this.fillColor,
     required this.textColor,
+    required this.navigateTo,
   });
 
   final Color fillColor;
   final Color textColor;
+  final void Function() navigateTo;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(top: 14.h),
       child: InkWell(
-        onTap: () {},
+        onTap: navigateTo,
         borderRadius: BorderRadius.circular(10.r),
         child: Container(
           height: 45.h,

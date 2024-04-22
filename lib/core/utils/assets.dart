@@ -24,4 +24,7 @@ class AssetsData {
   static const String icStarOutlined = 'assets/svg/solar_star_outline.svg';
 
   // Network images
+
+  static String noImageFound =
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/832px-No-Image-Placeholder.svg.png";
 }
