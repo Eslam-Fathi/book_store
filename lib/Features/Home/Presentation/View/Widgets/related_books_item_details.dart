@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:book_store/Features/Home/Data/Models/book_model/book_model.dart';
@@ -16,15 +17,20 @@ class RelatedBooksItemDetails extends StatelessWidget {
     return Row(
       children: [
         // Image
-        CachedNetworkImage(
-          imageUrl: (book.volumeInfo?.imageLinks?.thumbnail).toString(),
-          height: 105.h,
-          width: 100.w,
-          fit: BoxFit.contain,
+        ClipRRect(
+          borderRadius: BorderRadius.horizontal(
+            left: Radius.circular(10.r),
+          ),
+          child: CachedNetworkImage(
+            imageUrl: (book.volumeInfo?.imageLinks?.thumbnail).toString(),
+            height: 105.h,
+            width: 100.w,
+            fit: BoxFit.fill,
+          ),
         ),
 
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 5.h),
+          padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
           child: SizedBox(
             width: 180.w,
             child: Column(
