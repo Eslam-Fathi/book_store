@@ -57,6 +57,7 @@ class RecomendedBooksListView extends StatelessWidget {
             height: 135.h,
             child: Center(
               child: Text(
+                textAlign: TextAlign.center,
                 'Sorry, there is no audio books here yet! Stay tuned.',
                 style: Styles.textRegular16,
               ),

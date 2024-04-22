@@ -6,8 +6,7 @@ import 'package:book_store/Features/Home/Data/Models/book_model/book_model.dart'
 import 'package:book_store/Features/Home/Data/Repos/home_repo_impl.dart';
 import 'package:book_store/Features/Home/Presentation/Manager/Related_Books_cubit/related_books_cubit.dart';
 import 'package:book_store/Features/Home/Presentation/View/book_view.dart';
-import 'package:book_store/Features/Home/Presentation/View/home_screen.dart';
-import 'package:book_store/Features/Home/Presentation/View/related_books_view.dart';
+import 'package:book_store/Features/Home/Presentation/View/home_view.dart';
 import 'package:book_store/Features/Search/Presentation/View/search_view.dart';
 import 'package:book_store/Features/Splash/Presentation/View/splash_view.dart';
 import 'package:book_store/core/Services/service_locator.dart';
@@ -49,12 +48,6 @@ abstract class AppRouter {
         path: kSearchView,
         builder: (BuildContext context, GoRouterState state) {
           return const SearchView();
-        },
-      ),
-      GoRoute(
-        path: kRelatedView,
-        builder: (BuildContext context, GoRouterState state) {
-          return const RelatedBooksView();
         },
       ),
     ],

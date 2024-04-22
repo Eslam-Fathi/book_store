@@ -1,4 +1,3 @@
-import 'package:book_store/core/utils/app_router.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -10,15 +9,16 @@ import 'package:book_store/Features/Home/Presentation/View/Widgets/small_book_de
 import 'package:book_store/core/utils/assets.dart';
 import 'package:book_store/core/utils/constants.dart';
 import 'package:book_store/core/utils/styles.dart';
-import 'package:go_router/go_router.dart';
 
 class BookViewBody extends StatelessWidget {
   const BookViewBody({
     super.key,
     required this.book,
+    required this.openRelatedBooksOverlay,
   });
 
   final BookModel book;
+  final void Function() openRelatedBooksOverlay;
 
   @override
   Widget build(BuildContext context) {
@@ -45,11 +45,13 @@ class BookViewBody extends StatelessWidget {
               ),
 
               Text(
+                textAlign: TextAlign.center,
                 (book.volumeInfo?.title).toString(), // Book Title
 
                 style: Styles.textRegular24,
               ),
               Text(
+                textAlign: TextAlign.center,
                 book.volumeInfo?.authors![0].toString() ??
                     "Author Unknown", // Author Name
                 style: Styles.textRegular16,
@@ -66,11 +68,7 @@ class BookViewBody extends StatelessWidget {
                 textColor: const Color(0xff4A2B29),
               ),
               ComponentBookButton(
-                navigateTo: () {
-                  GoRouter.of(context).push(
-                    AppRouter.kRelatedView,
-                  );
-                },
+                navigateTo: openRelatedBooksOverlay,
                 fillColor: Colors.transparent,
                 textColor: kSecondaryColor,
               ),

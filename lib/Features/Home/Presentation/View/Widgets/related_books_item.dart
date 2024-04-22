@@ -5,12 +5,14 @@ import 'package:book_store/Features/Home/Presentation/View/Widgets/related_books
 import 'package:book_store/core/utils/constants.dart';
 
 class RelatedBooksItem extends StatelessWidget {
-  const RelatedBooksItem({super.key});
+  const RelatedBooksItem({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(6.0),
       child: Card(
         child: Container(
           decoration: ShapeDecoration(
@@ -19,7 +21,7 @@ class RelatedBooksItem extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
             ),
           ),
-          height: 105.h,
+          height: 100.h,
           child: const RelatedBooksItemDetails(),
         ),
       ),
