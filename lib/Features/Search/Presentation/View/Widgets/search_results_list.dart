@@ -28,9 +28,6 @@ class SearchResultsList extends StatelessWidget {
                   color: Colors.white54,
                 ),
               ),
-              // trailing: IconButton(
-              //     onPressed: () {},
-              //     icon: const FaIcon(FontAwesomeIcons.book),),
             ),
           );
         },
