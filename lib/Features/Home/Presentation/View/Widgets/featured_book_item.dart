@@ -1,4 +1,4 @@
-import 'package:book_store/Features/Home/Data/Models/book_model/book_model.dart';
+import 'package:book_store/core/Models/book_model/book_model.dart';
 import 'package:book_store/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

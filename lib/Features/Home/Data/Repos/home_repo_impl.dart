@@ -1,4 +1,4 @@
-import 'package:book_store/Features/Home/Data/Models/book_model/book_model.dart';
+import 'package:book_store/core/Models/book_model/book_model.dart';
 import 'package:book_store/Features/Home/Data/Repos/home_repo.dart';
 import 'package:book_store/core/Errors/failure.dart';
 import 'package:book_store/core/Services/api_service.dart';

@@ -1,9 +1,9 @@
+import 'package:book_store/core/Models/book_model/book_model.dart';
 import 'package:book_store/core/Functions/lunch_url.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:book_store/Features/Home/Data/Models/book_model/book_model.dart';
 import 'package:book_store/Features/Home/Presentation/View/Widgets/book_action_buttons_row.dart';
 import 'package:book_store/Features/Home/Presentation/View/Widgets/component_big_button.dart';
 import 'package:book_store/Features/Home/Presentation/View/Widgets/small_book_description.dart';
