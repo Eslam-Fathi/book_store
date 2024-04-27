@@ -2,7 +2,6 @@ import 'package:book_store/Features/Home/Presentation/View/Widgets/recent_books_
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:book_store/Features/Home/Presentation/View/Widgets/custom_filterbar.dart';
 import 'package:book_store/Features/Home/Presentation/View/Widgets/recommended_books_listview.dart';
 import 'package:book_store/Features/Home/Presentation/View/Widgets/featured_collections_listview.dart';
 import 'package:book_store/Features/Home/Presentation/View/Widgets/medium_title.dart';
@@ -24,7 +23,6 @@ class HomeViewBody extends StatelessWidget {
               SizedBox(
                 height: 20.h,
               ),
-              const CustomFilterBar(),
               SizedBox(height: 30.h),
               const FeaturedCollectionsListView(
                 height: 150,
