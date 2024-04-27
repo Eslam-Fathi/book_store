@@ -12,12 +12,12 @@ class ComponentBookButton extends StatelessWidget {
     super.key,
     required this.fillColor,
     required this.textColor,
-    required this.navigateTo,
+    this.navigateTo,
   });
 
   final Color fillColor;
   final Color textColor;
-  final void Function() navigateTo;
+  final void Function()? navigateTo;
 
   @override
   Widget build(BuildContext context) {

@@ -1,3 +1,4 @@
+import 'package:book_store/core/Functions/lunch_url.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -60,13 +61,17 @@ class BookViewBody extends StatelessWidget {
               SmallBookDescription(
                 book: book,
               ),
-              // Component Button
+              // Component Buttons
 
+              // this button will open the preview link of the book if available
               ComponentBookButton(
-                navigateTo: () {},
+                navigateTo: () {
+                  launchCustomUrl(context, book.volumeInfo?.previewLink);
+                },
                 fillColor: kSecondaryColor,
                 textColor: const Color(0xff4A2B29),
               ),
+              // this button will open the related books overlay
               ComponentBookButton(
                 navigateTo: openRelatedBooksOverlay,
                 fillColor: Colors.transparent,
