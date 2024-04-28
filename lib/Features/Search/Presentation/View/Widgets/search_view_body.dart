@@ -5,26 +5,43 @@ import 'package:book_store/Features/Search/Presentation/View/Widgets/custom_sear
 
 import 'package:book_store/Features/Search/Presentation/View/Widgets/search_results_list.dart';
 
-class SearchViewBody extends StatelessWidget {
+class SearchViewBody extends StatefulWidget {
   const SearchViewBody({super.key});
+
+  @override
+  State<SearchViewBody> createState() => _SearchViewBodyState();
+}
+
+class _SearchViewBodyState extends State<SearchViewBody> {
+  final TextEditingController _searchController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 20.h),
-        child: const Column(
+        child: Column(
           children: [
             // Search bar
-            CustomSearchBar(),
+            CustomSearchBar(searchController: _searchController),
 
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
 
-            // Search results
-
-            SearchResultsList(),
+            // Conditionally show either Text widget or search results widget
+            Visibility(
+              visible: _searchController.text.isEmpty,
+              replacement: const Expanded(
+                child: SearchResultsList(),
+              ),
+              child: const Center(
+                child: Text(
+                  'Enter search text',
+                  style: TextStyle(fontSize: 16),
+                ),
+              ),
+            ),
           ],
         ),
       ),

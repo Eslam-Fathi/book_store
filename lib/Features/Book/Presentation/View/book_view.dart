@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:book_store/core/Models/book_model/book_model.dart';
 import 'package:book_store/Features/Home/Data/Repos/home_repo_impl.dart';
-import 'package:book_store/Features/Home/Presentation/Manager/Related_Books_cubit/related_books_cubit.dart';
-import 'package:book_store/Features/Home/Presentation/View/Widgets/book_view_body.dart';
-import 'package:book_store/Features/Home/Presentation/View/Widgets/custom_appbar.dart';
-import 'package:book_store/Features/Home/Presentation/View/related_books_overlay_view.dart';
+import 'package:book_store/Features/Book/Presentation/Manager/Related_Books_cubit/related_books_cubit.dart';
+import 'package:book_store/Features/Book/Presentation/View/Widgets/book_view_body.dart';
+import 'package:book_store/core/Widgets/custom_appbar.dart';
+import 'package:book_store/Features/Book/Presentation/View/related_books_overlay_view.dart';
 import 'package:book_store/core/Services/service_locator.dart';
 
 class BookView extends StatefulWidget {

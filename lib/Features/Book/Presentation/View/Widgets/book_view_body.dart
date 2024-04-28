@@ -4,9 +4,9 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:book_store/Features/Home/Presentation/View/Widgets/book_action_buttons_row.dart';
+import 'package:book_store/Features/Book/Presentation/View/Widgets/book_action_buttons_row.dart';
 import 'package:book_store/Features/Home/Presentation/View/Widgets/component_big_button.dart';
-import 'package:book_store/Features/Home/Presentation/View/Widgets/small_book_description.dart';
+import 'package:book_store/Features/Book/Presentation/View/Widgets/small_book_description.dart';
 import 'package:book_store/core/utils/assets.dart';
 import 'package:book_store/core/utils/constants.dart';
 import 'package:book_store/core/utils/styles.dart';

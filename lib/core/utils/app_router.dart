@@ -4,8 +4,8 @@ import 'package:go_router/go_router.dart';
 
 import 'package:book_store/core/Models/book_model/book_model.dart';
 import 'package:book_store/Features/Home/Data/Repos/home_repo_impl.dart';
-import 'package:book_store/Features/Home/Presentation/Manager/Related_Books_cubit/related_books_cubit.dart';
-import 'package:book_store/Features/Home/Presentation/View/book_view.dart';
+import 'package:book_store/Features/Book/Presentation/Manager/Related_Books_cubit/related_books_cubit.dart';
+import 'package:book_store/Features/Book/Presentation/View/book_view.dart';
 import 'package:book_store/Features/Home/Presentation/View/home_view.dart';
 import 'package:book_store/Features/Search/Presentation/View/search_view.dart';
 import 'package:book_store/Features/Splash/Presentation/View/splash_view.dart';

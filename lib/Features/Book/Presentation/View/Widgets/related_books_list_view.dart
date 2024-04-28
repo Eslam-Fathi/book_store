@@ -1,5 +1,5 @@
-import 'package:book_store/Features/Home/Presentation/Manager/Related_Books_cubit/related_books_cubit.dart';
-import 'package:book_store/Features/Home/Presentation/View/Widgets/related_books_item.dart';
+import 'package:book_store/Features/Book/Presentation/Manager/Related_Books_cubit/related_books_cubit.dart';
+import 'package:book_store/Features/Book/Presentation/View/Widgets/related_books_item.dart';
 import 'package:book_store/core/Widgets/custom_circular_indicator.dart';
 import 'package:book_store/core/Widgets/custom_error_message.dart';
 import 'package:flutter/material.dart';

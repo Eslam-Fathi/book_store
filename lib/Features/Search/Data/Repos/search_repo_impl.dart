@@ -5,10 +5,10 @@ import 'package:book_store/core/Services/api_service.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
-class SearchpoImpl implements SearchRepo {
+class SearchRepoImpl implements SearchRepo {
   final ApiService apiService;
 
-  SearchpoImpl({required this.apiService});
+  SearchRepoImpl(this.apiService);
 
   @override
   Future<Either<Failure, List<BookModel>>> searchBooks(
