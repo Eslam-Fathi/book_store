@@ -11,18 +11,32 @@ class SearchRepoImpl implements SearchRepo {
   SearchRepoImpl(this.apiService);
 
   @override
-  Future<Either<Failure, List<BookModel>>> searchBooks(
-      String searchText) async {
+  Future<Either<Failure, List<BookModel>>> searchBooks() async {
+    final List<String> searchList = [
+      'Mathematics',
+      'Science',
+      'History',
+      'Politics'
+    ];
+    List<BookModel> searchBookList = [];
+    List<BookModel> randomizedSearchBookList = [];
+
     try {
-      var data = await apiService.getBooks(
-          endPoint: 'volumes?Filtering=free-ebooks&q=$searchText');
-      List<BookModel> searchBookList = [];
-      for (var item in data['items']) {
-        searchBookList.add(
-          BookModel.fromJson(item),
-        );
+      for (var searchTerm in searchList) {
+        var data = await apiService.getBooks(
+            endPoint: 'volumes?Filtering=free-ebooks&q=$searchTerm');
+
+        for (var item in data['items']) {
+          searchBookList.add(
+            BookModel.fromJson(item),
+          );
+        }
       }
-      return right(searchBookList);
+
+      // Randomize the order of the items
+      randomizedSearchBookList = searchBookList.toList()..shuffle();
+
+      return right(randomizedSearchBookList);
     } catch (e) {
       if (e is DioException) {
         return left(

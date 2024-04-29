@@ -10,14 +10,36 @@ class RelatedBooksCubit extends Cubit<RelatedBooksState> {
 
   final HomeRepo homeRepo;
 
+  // Flag to track if the cubit is closed
+  bool _isClosed = false;
+
+  // Override close method to set _isClosed flag
+  @override
+  Future<void> close() {
+    _isClosed = true;
+    return super.close();
+  }
+
   // get newest books
   void getRelatedBooks({required String category}) async {
+    if (_isClosed) {
+      // Do not emit new states if cubit is closed
+      return;
+    }
+
     emit(RelatedBooksLoading());
     final response = await homeRepo.fetchRelatedBooks(category: category);
-    response.fold((failure) {
-      emit(RelatedBooksFailure(failure.errorMessage));
-    }, (books) {
-      emit(RelatedBooksSuccess(books));
-    });
+    response.fold(
+      (failure) {
+        if (!_isClosed) {
+          emit(RelatedBooksFailure(failure.errorMessage));
+        }
+      },
+      (books) {
+        if (!_isClosed) {
+          emit(RelatedBooksSuccess(books));
+        }
+      },
+    );
   }
 }

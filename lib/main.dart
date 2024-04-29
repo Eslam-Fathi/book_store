@@ -1,5 +1,3 @@
-import 'package:book_store/Features/Search/Data/Repos/search_repo_impl.dart';
-import 'package:book_store/Features/Search/Presentation/Manager/search_function_cubit/search_function_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -33,11 +31,6 @@ class BookStoreApp extends StatelessWidget {
           create: (context) =>
               NewestBooksCubit(getServiceLocator.get<HomeRepoImpl>())
                 ..getNewestBooks(),
-        ),
-        BlocProvider(
-          create: (context) =>
-              SearchFunctionCubit(getServiceLocator.get<SearchRepoImpl>())
-                ..searchForBooks(''),
         ),
       ],
       child: ScreenUtilInit(

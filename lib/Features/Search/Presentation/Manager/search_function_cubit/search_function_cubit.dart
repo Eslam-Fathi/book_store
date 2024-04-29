@@ -10,9 +10,9 @@ class SearchFunctionCubit extends Cubit<SearchFunctionState> {
 
   final SearchRepo searchRepo;
 
-  void searchForBooks(String searchText) async {
+  Future<void> searchForBooks() async {
     emit(SearchFunctionLoading());
-    final response = await searchRepo.searchBooks(searchText);
+    final response = await searchRepo.searchBooks();
     response.fold((failure) {
       emit(SearchFunctionFailure(failure.errorMessage));
     }, (books) {
